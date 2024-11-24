@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import Avatar from './src/Components/Avatar';
+import SettingsCard from './src/Components/Settings';
+import DarkMode from './src/Components/DarkMode';
 
 export default function App() {
+  const { isDarkMode, toggleDarkMode } = DarkMode(); 
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? '#2c2c2c' : '#fff' }}> 
+        <Avatar isDarkMode={isDarkMode} />
+        <SettingsCard isDarkMode={isDarkMode} toggleSwitch={toggleDarkMode} /> 
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
