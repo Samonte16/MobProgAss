@@ -8,13 +8,14 @@ const Layout = () => {
 
     }}
     >
+      
 
       <Tabs.Screen name = 'index' options = {{
           title: 'Home',
           tabBarIcon: ({ focused, color, size, }) => (
             <MaterialCommunityIcons
             name={focused ? 'home' : 'home-outline'}
-            color={color}
+            color={'green'}
             size={size}
             />
           ),
@@ -25,7 +26,7 @@ const Layout = () => {
                 tabBarIcon: ({ focused, color, size, }) => (
                   <MaterialCommunityIcons
                   name={focused ? 'cog' : 'cog-outline'}
-                  color={color}
+                  color={'green'}
                   size={size}
                   />
                 ),

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'pink', 
+    backgroundColor: 'green', 
  
   },
   container: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'whit',
     marginBottom: 40,
   },
   input: {

@@ -45,29 +45,29 @@ const SettingsScreen = () => {
       <View style={styles.section}>
         <Text style={[styles.header, isDarkMode && styles.darkText]}>Profile</Text>
         <TouchableOpacity style={[styles.rowWithBackground, isDarkMode ? styles.darkRow : styles.lightRow]}>
-          <Icon name="person" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="person" size={24} color={isDarkMode ? "white" : "green"} />
           <Text style={[styles.item, isDarkMode && styles.darkText]}>Manage Account</Text>
-          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "green"} />
         </TouchableOpacity>
       </View>
 
       <View style={styles.section}>
         <TouchableOpacity style={[styles.rowWithBackground, isDarkMode ? styles.darkRow : styles.lightRow]}>
-          <Icon name="shield" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="shield" size={24} color={isDarkMode ? "white" : "green"} />
           <Text style={[styles.item, isDarkMode && styles.darkText]}>Security</Text>
-          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "green"} />
         </TouchableOpacity>
       </View>
 
       <View style={styles.section}>
         <Text style={[styles.header, isDarkMode && styles.darkText]}>Settings</Text>
         <TouchableOpacity style={[styles.rowWithBackground, isDarkMode ? styles.darkRow : styles.lightRow]}>
-          <Icon name="notifications" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="notifications" size={24} color={isDarkMode ? "white" : "green"} />
           <Text style={[styles.item, isDarkMode && styles.darkText]}>Notifications</Text>
-          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="chevron-forward-outline" size={24} color={isDarkMode ? "white" : "green"} />
         </TouchableOpacity>
         <View style={[styles.rowWithBackground, isDarkMode ? styles.darkRow : styles.lightRow]}>
-          <Icon name="moon" size={24} color={isDarkMode ? "white" : "gray"} />
+          <Icon name="moon" size={24} color={isDarkMode ? "white" : "green"} />
           <Text style={[styles.item, isDarkMode && styles.darkText]}>Dark Mode</Text>
           <Switch
             trackColor={{ false: "#767577", true: "#81C784" }}
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
-    backgroundColor: 'pink',
+    backgroundColor: 'green',
   },
   image: {
     width: 175,
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#263238',
     paddingTop: 15,
+    color: 'white',
   },
   darkText: {
     color: '#E0E0E0',
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
   statusText: {
     fontSize: 14,
     color: '#6D6D6D',
+    color: 'white',
   },
   section: {
     padding: 15,
@@ -169,7 +171,7 @@ const styles = StyleSheet.create({
   signOutButton: {
     marginTop: 20,
     paddingVertical: 15,
-    backgroundColor: 'pink',
+    backgroundColor: 'green',
     borderRadius: 10,
     alignItems: 'center',
     marginLeft: 40,
@@ -180,7 +182,7 @@ const styles = StyleSheet.create({
   },
   signOutText: {
     fontSize: 18,
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
   },
   darkSignOutText: {
