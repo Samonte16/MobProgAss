@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useRouter } from 'expo-router';
 
 const Register = () => { 
@@ -30,25 +30,31 @@ const Register = () => {
   };
 
   return (
-    <View style={styles.background}>
+    <ImageBackground
+      source={require('../assets/login.png')} // Ensure this path is correct
+      style={styles.background}
+    >
       <View style={styles.container}>
         <Text style={styles.header}>Sign Up</Text>
         <ScrollView>  
           <TextInput
             style={styles.input}
             placeholder="First Name"
+            placeholderTextColor="white"
             value={formData.firstName}
             onChangeText={(text) => setFormData({ ...formData, firstName: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Last Name"
+            placeholderTextColor="white"
             value={formData.lastName}
             onChangeText={(text) => setFormData({ ...formData, lastName: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Email Address"
+            placeholderTextColor="white"
             value={formData.email}
             onChangeText={(text) => setFormData({ ...formData, email: text })}
             keyboardType="email-address"
@@ -56,6 +62,7 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Phone Number"
+            placeholderTextColor="white"
             value={formData.phone}
             onChangeText={(text) => setFormData({ ...formData, phone: text })}
             keyboardType="phone-pad"
@@ -63,18 +70,21 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Birth Date"
+            placeholderTextColor="white"
             value={formData.birthDate}
             onChangeText={(text) => setFormData({ ...formData, birthDate: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Gender"
+            placeholderTextColor="white"
             value={formData.gender}
             onChangeText={(text) => setFormData({ ...formData, gender: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Password"
+            placeholderTextColor="white"
             value={formData.password}
             onChangeText={(text) => setFormData({ ...formData, password: text })}
             secureTextEntry
@@ -82,6 +92,7 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Confirm Password"
+            placeholderTextColor="white"
             value={formData.confirmPassword}
             onChangeText={(text) => setFormData({ ...formData, confirmPassword: text })}
             secureTextEntry
@@ -106,23 +117,23 @@ const Register = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    resizeMode: 'cover', // Ensures the image covers the entire screen
     justifyContent: 'center',
-    backgroundColor: 'green', 
   },
   container: {
     alignItems: 'center',
     padding: 20,
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',  
+    backgroundColor: 'rgba(0, 255, 0, 0.1)',  // Transparent green background (50% opacity)
     borderRadius: 10,
-    left: 19,
+    marginHorizontal: 20,
     paddingBottom: 30,
     top: 15,
     width: '90%',
@@ -147,7 +158,6 @@ const styles = StyleSheet.create({
     color: 'black', 
     width: 280,
     borderRadius: 10,
-    backgroundColor: 'rgba(255, 255, 255, 0.13)',
   },
   buttonContainer: {
     marginTop: 20,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
 
@@ -8,10 +8,13 @@ export default function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <View style={styles.background}>
+    <ImageBackground
+      source={require('../assets/login.png')} // Ensure this path is correct
+      style={styles.background}
+    >
       <View style={styles.container}>
         <Text style={styles.title}>Login</Text>
-
+        
         <TextInput 
           placeholder="Email or Phone" 
           style={styles.input} 
@@ -55,31 +58,28 @@ export default function LoginScreen() {
           <Text style={styles.registerText}>Don't have an account? Sign Up</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
-    backgroundColor: 'green', 
- 
   },
   container: {
     alignItems: 'center',
     padding: 20,
-    justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',  
+    backgroundColor: 'rgba(0, 255, 0, 0.1)',
     borderRadius: 10,
-    left: 19,
+    marginHorizontal: 20,
     paddingBottom: 30,
-    width: '90%',
   },
   title: {
-    fontSize: 32,
+    fontSize: 50,
     fontWeight: 'bold',
-    color: 'whit',
+    color: 'white',
     marginBottom: 40,
   },
   input: {
@@ -105,27 +105,29 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   forgotPasswordText: {
-    color: 'black',
+    color: 'white',
     textDecorationLine: 'underline',
   },
   button: {
     width: '100%',
-    backgroundColor: '#fff',  
+    backgroundColor: 'white', 
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
-    marginTop: 0,
+    marginTop: 10,
   },
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000',  
+    color: 'black',  
   },
   registerLink: {
     marginTop: 10,
+    color: 'white',
   },
   registerText: {
-    color: 'black',
+    color: 'white',
     textDecorationLine: 'underline',
+    fontSize: 20,
   },
 });

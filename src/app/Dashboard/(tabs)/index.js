@@ -67,6 +67,7 @@ const index = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Enter task"
+                    placeholderTextColor="white" // Set placeholder text color to white
                     value={task}
                     onChangeText={(text) => setTask(text)}
                 />
