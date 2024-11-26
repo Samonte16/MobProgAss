@@ -40,21 +40,21 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="First Name"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.firstName}
             onChangeText={(text) => setFormData({ ...formData, firstName: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Last Name"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.lastName}
             onChangeText={(text) => setFormData({ ...formData, lastName: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Email Address"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.email}
             onChangeText={(text) => setFormData({ ...formData, email: text })}
             keyboardType="email-address"
@@ -62,7 +62,7 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Phone Number"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.phone}
             onChangeText={(text) => setFormData({ ...formData, phone: text })}
             keyboardType="phone-pad"
@@ -70,21 +70,21 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Birth Date"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.birthDate}
             onChangeText={(text) => setFormData({ ...formData, birthDate: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Gender"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.gender}
             onChangeText={(text) => setFormData({ ...formData, gender: text })}
           />
           <TextInput
             style={styles.input}
             placeholder="Password"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.password}
             onChangeText={(text) => setFormData({ ...formData, password: text })}
             secureTextEntry
@@ -92,7 +92,7 @@ const Register = () => {
           <TextInput
             style={styles.input}
             placeholder="Confirm Password"
-            placeholderTextColor="white"
+            placeholderTextColor="black"
             value={formData.confirmPassword}
             onChangeText={(text) => setFormData({ ...formData, confirmPassword: text })}
             secureTextEntry
@@ -151,9 +151,10 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    borderColor: 'white', 
+    borderColor: 'black', 
     borderWidth: 2,
     marginBottom: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Slight transparency for inputs
     paddingHorizontal: 10,
     color: 'black', 
     width: 280,
